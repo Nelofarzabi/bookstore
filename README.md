@@ -1,1 +1,1 @@
-# bookstore
+# bookstore setup
