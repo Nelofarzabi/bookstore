@@ -1,0 +1,64 @@
+.navbar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.813rem 6.25rem;
+  margin-bottom: 2.375rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookstore {
+  margin-right: 2.938rem;
+  color: #0290ff;
+  font-size: 1.875rem;
+}
+
+.bookstore .cms {
+  text-transform: uppercase;
+}
+
+.bookstore:focus {
+  color: #0290ff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-right: 2.563rem;
+  text-transform: uppercase;
+  font-size: 0.813rem;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #121212;
+}
+
+.person {
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  padding: 0.875rem;
+  width: 2.813rem;
+  height: 2.813rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  color: #0290ff;
+}
