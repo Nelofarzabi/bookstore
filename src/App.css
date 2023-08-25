@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,6 +17,19 @@ body {
 }
 
 hr {
-  margin: 2.5rem 6.25rem;
+  margin: 2.5rem 0 1.813rem 6.25rem;
   border: 1px solid #eee;
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #c4c4c4;
+}
+
+select {
+  font-family: 'Montserrat', sans-serif;
+  color: #c4c4c4;
+  font-size: 1rem;
+  margin: 0.438rem 10.438rem 0.25rem 0;
 }
