@@ -11,7 +11,7 @@
   padding: 0.813rem 1.063rem;
   background-color: white;
   border: 1px solid #e8e8e8;
-  width: 55%;
+  width: 26%;
   border-radius: 4px;
 }
 
@@ -30,6 +30,7 @@ input::placeholder {
   border: 1px solid #e8e8e8;
   border-radius: 4px;
   width: 20%;
+  margin-right: 1.5rem;
 }
 
 .add-button {
@@ -44,4 +45,23 @@ input::placeholder {
   border-radius: 4px;
   width: 20%;
   cursor: pointer;
+}
+
+.divError {
+  margin: 0 auto;
+  padding: 1rem;
+  background: pink;
+  display: none;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+}
+
+form {
+  margin-bottom: 1rem;
 }

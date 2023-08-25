@@ -1,25 +1,30 @@
+import { useSelector } from 'react-redux';
 import BookCard from './bookCard';
-import data from '../data';
 import AddBook from './addBook';
 
-const articles = (article) => (
-  <BookCard
-    category={article.category}
-    title={article.title}
-    author={article.author}
-    percentValue={article.percentValue}
-    chapter={article.chapter}
-  />
-);
+export default function Book() {
+  const data = useSelector((state) => state.book);
 
-const Book = () => (
-  <>
-    {
-      data.map(articles)
-    }
-    <hr />
-    <AddBook />
-  </>
-);
-
-export default Book;
+  return (
+    <>
+      <ul>
+        {
+          data.map((article) => (
+            <li key={article.item_id}>
+              <BookCard
+                id={article.item_id}
+                category={article.category}
+                title={article.title}
+                author={article.author}
+                chapter={article.chapter}
+                percentValue={article.percentValue}
+              />
+            </li>
+          ))
+        }
+      </ul>
+      <hr />
+      <AddBook />
+    </>
+  );
+}
