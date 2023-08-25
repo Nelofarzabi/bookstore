@@ -7,7 +7,6 @@ import { removeBook } from '../redux/books/booksSlice';
 const BookCard = ({
   id, category, title, author, percentValue, chapter,
 }) => {
-  // const data = useSelector((state) => state.book);
   const dispatch = useDispatch();
 
   const handleDelete = () => {
