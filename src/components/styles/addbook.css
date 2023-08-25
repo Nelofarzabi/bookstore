@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .add-new {
   text-transform: uppercase;
-  color: #121212;
+  font-family: 'Montserrat', sans-serif;
+  color: #888;
+  font-weight: bold;
+  letter-spacing: -0.18px;
   opacity: 0.5;
   font-size: 1.25rem;
-  margin-bottom: 1.188rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
 }
 
 .book-title {
@@ -11,7 +17,7 @@
   padding: 0.813rem 1.063rem;
   background-color: white;
   border: 1px solid #e8e8e8;
-  width: 26%;
+  width: 25%;
   border-radius: 4px;
 }
 
@@ -36,6 +42,7 @@ input::placeholder {
 .add-button {
   color: white;
   font-size: 0.813rem;
+  font-family: 'Roboto Slab', serif;
   background-color: #0290ff;
   padding: 0.886rem 1.375rem;
   text-align: center;
