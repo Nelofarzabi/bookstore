@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialeState = [];
+const initialState = []; // Corrected the spelling of 'initialState'
 
 export const categoriesSlice = createSlice({
   name: 'categories',
-  initialeState,
+  initialState, // Using the corrected initialState
   reducers: {
     checkStatus: (state, action) => {
       state.categories = action.payload === 'Under construction'
