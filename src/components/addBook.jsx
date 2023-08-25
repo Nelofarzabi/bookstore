@@ -2,17 +2,16 @@ import { useState } from 'react';
 import './styles/addbook.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { postBook } from '../redux/books/booksSlice';
 
 export default function AddBook() {
   const [book, setBook] = useState({
     author: '',
     title: '',
     category: '',
-    percentValue: 0,
-    chapter: 'Introduction',
   });
   const [error, setError] = useState('');
+  const [success, setsuccess] = useState('');
 
   const dispatch = useDispatch();
 
@@ -31,16 +30,21 @@ export default function AddBook() {
         title: book.title,
         author: book.author,
         category: book.category,
-        percentValue: 0,
-        chapter: 'Introduction',
       };
-      dispatch(addBook(newBook));
+      dispatch(postBook(newBook));
       setBook({
         title: '',
         author: '',
-        percentValue: 0,
-        chapter: 'Introduction',
+        category: '',
       });
+      const divSuccess = document.querySelector('.divSuccess');
+      divSuccess.style.display = 'block';
+      setsuccess('Book added successfully');
+      const showSuccess = () => {
+        setsuccess('');
+        divSuccess.style.display = 'none';
+      };
+      setTimeout(showSuccess, 3000);
     } else {
       const divError = document.querySelector('.divError');
       divError.style.display = 'block';
@@ -66,8 +70,11 @@ export default function AddBook() {
               <option value="Fiction">Fiction</option>
               <option value="Non Fiction">Non Fiction</option>
             </select>
-            <button type="submit" className="add-button">Add book</button>
+            <button type="button" className="add-button" onClick={handleSubmit}>Add book</button>
           </form>
+          <div className="divSuccess">
+            <p className="success">{success}</p>
+          </div>
           <div className="divError">
             <p className="error">{error}</p>
           </div>

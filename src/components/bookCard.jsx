@@ -2,15 +2,22 @@ import PropTypes from 'prop-types';
 import './styles/bookcard.css';
 import { useDispatch } from 'react-redux';
 import CircularProgress from './Progress';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook } from '../redux/books/booksSlice';
 
 const BookCard = ({
   id, category, title, author, percentValue, chapter,
 }) => {
   const dispatch = useDispatch();
-
-  const handleDelete = () => {
-    dispatch(removeBook(id));
+  const handleDelete = (e) => {
+    e.preventDefault();
+    dispatch(deleteBook(id));
+    const divError = document.querySelector('.deleteError');
+    divError.style.display = 'block';
+    divError.innerHTML = `Book with id ${id} deleted successfully`;
+    const show = () => {
+      divError.style.display = 'none';
+    };
+    setTimeout(show, 3000);
   };
 
   return (
@@ -49,6 +56,7 @@ const BookCard = ({
           </div>
         </div>
       </div>
+      <div className="deleteError" />
     </>
   );
 };

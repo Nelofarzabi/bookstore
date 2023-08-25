@@ -55,6 +55,43 @@ input::placeholder {
   border-radius: 5px;
   width: 50%;
   text-align: center;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  transition: position 0.5s;
+}
+
+.deleteError {
+  margin: 0 auto;
+  padding: 1rem;
+  background: pink;
+  display: none;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  transition: position 0.5s;
+  color: red;
+}
+
+.divSuccess {
+  margin: 0 auto;
+  padding: 1rem;
+  background: lightgreen;
+  display: none;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+}
+
+.success {
+  color: green;
+  font-size: 1.2rem;
 }
 
 .error {
