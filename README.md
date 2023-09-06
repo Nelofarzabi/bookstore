@@ -7,7 +7,6 @@
 
 - [bookstore-cms](#bookstore-cms)
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Bookstore CMS\] ](#-Bookstore CMS-)
 	- [🛠 Built With ](#-built-with-)
 		- [Tech Stack ](#tech-stack-)
 		- [Key Features ](#key-features-)
@@ -70,7 +69,9 @@ Example commands:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+###Live Demo
+
+[Live Demo ](https://snazzy-lokum-a5b920.netlify.app/)
 
 
 ## 👥 Authors <a name="authors"></a>
